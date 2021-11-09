@@ -1,0 +1,22 @@
+{
+  "name": "google-maps",
+  "version": "1.0.0",
+  "description": "Electron wrapper for Google maps.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "vikdevelop",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^15.3.1"
+  }
+}
