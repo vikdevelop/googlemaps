@@ -1,0 +1,33 @@
+ 
+ ​<?​xml​ version​=​"​1.0​"​ encoding​=​"​UTF-8​"​?> 
+ ​<​component​ ​type​=​"​desktop​"​> 
+ ​    <​id​>com.github.vikdevelop.googlemaps</​id​> 
+ ​    <​launchable​ ​type​=​"​desktop-id​"​>com.github.vikdevelop.googlemaps.desktop</​launchable​> 
+ ​    <​name​>Google Maps</​name​> 
+ ​    <​summary​>Maps by Google.</​summary​> 
+ ​    <​metadata_license​>CC0-1.0</​metadata_license​> 
+ ​    <​project_license​>MIT</​project_license​> 
+ ​     
+ ​    <​description​> 
+ ​        <p>Google Maps is the most popular maps in the world. Enjoy Google Maps desktop app on Linux!</p>
+ ​        <p>NOTE: this application is Electron wrapper of webapp Google Maps</p>
+</​description​> 
+ ​     
+ ​    <​url​ ​type​=​"​homepage​"​>https://github.com/vikdevelop/googlemaps</​url​> 
+ ​    <​url​ ​type​=​"​bugtracker​"​>https://github.com/vikdevelop/googlemaps/issues</​url​> 
+ ​     
+ ​    <​screenshots​>
+        <!-- ADD SCREENSHOTS -->
+ ​    </​screenshots​> 
+ ​     
+ ​    <​content_rating​ ​type​=​"​oars-1.1​"​/> 
+ ​     
+ ​    <​categories​> 
+ ​        <​category​>Productivity</​category​>
+ ​    </​categories​> 
+ ​     
+ ​  <release>
+ ​        <​release​ ​version​=​"​1.0​.0"​ ​date​=​"​2021-11-10​"​> 
+ ​        </​release​> 
+ ​  </​releases​> 
+ ​</​component​>
