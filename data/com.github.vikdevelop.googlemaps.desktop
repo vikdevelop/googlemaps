@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Google Maps
+Type=Application
+Name[cs]=Mapy Google
+Name[de]=Google Karten
+Icon=com.github.vikdevelop.googlemaps
+Exec=run.sh
+Categories=Internet
