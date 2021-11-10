@@ -1,3 +1,4 @@
 #/bin/sh
 
-exec npm start
+cd /app
+npm start
