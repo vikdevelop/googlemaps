@@ -1,0 +1,35 @@
+# Maintainer: vikdevelop <super-vik1@protonmail.com>
+
+pkgname=googlemaps
+_appid="com.github.vikdevelop.$pkgname"
+pkgver=1.0.1A
+pkgrel=1
+pkgdesc="Electron wrapper of Google maps."
+arch=('any')
+url="https://github.com/vikdevelop/googlemaps"
+license=('GPL3')
+depends=('npm' 'nodejs-nopt')
+source=("$pkgname-$pkgver.tar.gz::$url/archive/refs/tags/1.0.1A.tar.gz")
+sha256sums=('SKIP')
+
+build() {
+ cd "$pkgname-$pkgver"
+ npm install electron
+ npm install
+}
+package() {
+  cd "$pkgname-1.0.1A"
+  install -D "main.js" "$pkgdir/usr/share/googlemaps/main.js"
+  install -D "preload.js" "$pkgdir/usr/share/googlemaps/preload.js"
+  install -D "renderer.js" "$pkgdir/usr/share/googlemaps/renderer.js"
+  install -D "package.json" "$pkgdir/usr/share/googlemaps/package.json"
+  install -D "package-lock.json" "$pkgdir/usr/share/googlemaps/package-lock.json"
+  cp -R "node_modules" "$pkgdir/usr/share/googlemaps/node_modules"
+  install -D "archlinux/run-arch.sh" "$pkgdir/usr/bin/run-arch.sh"
+  install -D "archlinux/googlemaps.desktop" "$pkgdir/usr/share/applications/googlemaps.desktop"
+  install -D "data/com.github.vikdevelop.googlemaps.png" "$pkgdir/usr/share/icons/hicolor/128x128/apps/com.github.vikdevelop.googlemaps.png"
+  install -D "LICENSE" "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+  cd archlinux
+  chmod +x $pkgdir/usr/bin/run-arch.sh
+  cd
+}
