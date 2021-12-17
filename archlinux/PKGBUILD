@@ -9,15 +9,22 @@ arch=('any')
 url="https://github.com/vikdevelop/googlemaps"
 license=('MIT')
 depends=('npm' 'nodejs-nopt')
-source=("$pkgname-$pkgver.tar.gz::$url/archive/refs/tags/1.arch.tar.gz")
+source=("git+https://github.com/vikdevelop/googlemaps.git")
 sha256sums=('SKIP')
 
+prepare() {
+ cd "$pkgname"
+ echo "cd /usr/share/googlemaps && npm start" > googlemaps.sh
+ chmod +x googlemaps.sh
+}
+
 build() {
- cd "$pkgname-$pkgver"
+ cd "$pkgname"
  npm install
 }
 package() {
-  cd "$pkgname-$pkgver"
+  cd "$pkgname"
+  install -D "googlemaps.sh" -t "$pkgdir/usr/bin"
   install -D "main.js" "$pkgdir/usr/share/googlemaps/main.js"
   install -D "preload.js" "$pkgdir/usr/share/googlemaps/preload.js"
   install -D "renderer.js" "$pkgdir/usr/share/googlemaps/renderer.js"
@@ -29,7 +36,4 @@ package() {
   install -D "data/com.github.vikdevelop.googlemaps.png" "$pkgdir/usr/share/icons/hicolor/128x128/apps/com.github.vikdevelop.googlemaps.png"
   install -D "data/$_appid.metainfo.xml" "$pkgdir/usr/share/metainfo/$_appid.metainfo.xml"
   install -D "LICENSE" "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
-  cd archlinux
-  chmod +x $pkgdir/usr/bin/$pkgname.sh
-  cd
 }
