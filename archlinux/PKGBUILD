@@ -31,7 +31,6 @@ package() {
   install -D "package.json" "$pkgdir/usr/share/googlemaps/package.json"
   install -D "package-lock.json" "$pkgdir/usr/share/googlemaps/package-lock.json"
   cp -R "node_modules" "$pkgdir/usr/share/googlemaps/node_modules"
-  install -D "archlinux/$pkgname.sh" "$pkgdir/usr/bin/$pkgname.sh"
   install -D "archlinux/googlemaps.desktop" "$pkgdir/usr/share/applications/googlemaps.desktop"
   install -D "data/com.github.vikdevelop.googlemaps.png" "$pkgdir/usr/share/icons/hicolor/128x128/apps/com.github.vikdevelop.googlemaps.png"
   install -D "data/$_appid.metainfo.xml" "$pkgdir/usr/share/metainfo/$_appid.metainfo.xml"
