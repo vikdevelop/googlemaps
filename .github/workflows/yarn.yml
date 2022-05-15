@@ -1,0 +1,17 @@
+name: googlemaps
+
+on: push
+
+jobs:
+  app:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: borales/actions-yarn@v2.3.0
+        with:
+          cmd: install
+      - uses: borales/actions-yarn@v2.3.0
+      - uses: borales/actions-yarn@v2.3.0
+        with:
+          cmd: electron-packager ./ googlemaps --platform=linux --arch=x64 --electron-version=15.4.1 --out=googlemaps_build/
