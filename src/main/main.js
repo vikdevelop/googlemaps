@@ -5,8 +5,11 @@ const path = require('path')
 function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 1920,
-    height: 1080,
+   width: 3840,
+    height: 2160,
+    icon: 'resources/com.github.vikdevelop.googlemaps.png',
+    title: "Google Maps",
+    autoHideMenuBar: 'true',
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
     }
